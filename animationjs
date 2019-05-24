@@ -1,0 +1,36 @@
+document.addEventListener("DOMContentLoaded",function(){
+    var nut = document.getElementsByClassName('declick');
+    var nd = document.getElementsByClassName('dehienthi');
+    for(var i = 0 ; i< nut.length ; i++){
+        nut[i].onclick = function(){
+            console.log(this.classList);
+            if(this.classList[1] == 'mautrang'){
+                this.classList.remove('mautrang');
+                    // lay ve data-hienle
+         var noidunghienra= this.getAttribute('data-hienlen');
+         var phan_tu_hien_ra = document.getElementById(noidunghienra);
+         phan_tu_hien_ra.classList.remove('ra');        
+        }
+            else{
+                       // clear all class "mau trang"
+               for(var k = 0 ; k<nut.length ; k++){
+                nut[k].classList.remove('mautrang');
+            }
+            // doi tuong duoc click thanh mau trang
+            this.classList.toggle('mautrang')
+            // lay ve data-hienle
+         var noidunghienra= this.getAttribute('data-hienlen');
+         var phan_tu_hien_ra = document.getElementById(noidunghienra);
+        //  cho all cac div .de hien thi khac an di
+         for(var i=0; i < nd.length;i++){
+             nd[i].classList.remove('ra');
+         }
+        //  cho div duoc click hien ra
+         phan_tu_hien_ra.classList.toggle('ra');
+         
+            }
+         
+        }
+        
+    }
+},false)

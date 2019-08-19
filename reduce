@@ -1,0 +1,11 @@
+//Give a array of arrays.Problem is Create a single a array.
+function Flatten(arr){
+  return arr.reduce(function(flat,toFlat){
+    return flat.concat(toFlat);
+  },[])
+  Flatten(arr);
+  var arr = {
+    ["Nguyen","is"],
+    ["Love"],
+    [true],
+  }

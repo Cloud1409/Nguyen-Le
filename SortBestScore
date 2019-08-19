@@ -1,0 +1,13 @@
+var students = [
+  { name: 'A', score: 100 },
+  { name: 'B', score: 10 },
+  { name: 'C', score: 101 },
+  { name: 'D', score: 50 },
+  { name: 'E', score: 75 }
+];
+function getTopstudent(students){
+  var bestScore = Students.sort(function(member1,member2){
+    return member2.score - member1.score;
+  });
+  return bestScore.slice(0,4);
+}

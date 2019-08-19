@@ -1,0 +1,13 @@
+//count the occurrent of each element inside an array using reduce.
+function countOccurrent(arr){
+  let result = arr.reduce(function(count,item){
+    if(count[item] == undefined){
+      count[item] = 1;
+          }
+     else{
+      count[item]++;
+          }
+        return count;
+  },[])
+  return result;
+}

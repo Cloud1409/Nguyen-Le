@@ -1,0 +1,8 @@
+function sortNumbers(arr) {
+  var ascendingNumber = arr.sort(function(a , b){
+    return b-a;
+  });
+  return ascendingNumber;
+}
+
+sortNumbers([5, 1, 3, 2]); // [1, 2, 3, 5]

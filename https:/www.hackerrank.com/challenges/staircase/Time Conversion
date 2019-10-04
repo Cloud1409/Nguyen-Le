@@ -1,0 +1,22 @@
+function timeConversion(s) {
+    /*
+     * Write your code here.
+     */
+    const arr = s.slice(0,8).split(':');
+    if(s.indexOf('PM') > -1){
+//  convert PM
+    if(arr[0] == 12){
+        arr[0]  = '12';
+    }
+    else{
+        arr[0] = Number(arr[0]) + 12;
+    }
+    }
+    else{
+//  convert AM
+    if(arr [0] == 12){
+        arr[0] = '00';
+    }
+    }
+    return arr.join(":");
+}

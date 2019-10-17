@@ -1,0 +1,12 @@
+function birthday(s, d, m) {
+    var answer = 0;
+     for(var i = 0 ; i < s.length ; i++){
+         var sum = 0;
+         for(var j = i; j<m+i ; j++){
+             sum +=s[j];
+         }
+         if(sum === d){
+             answer++;
+         }
+     }
+         return answer;
